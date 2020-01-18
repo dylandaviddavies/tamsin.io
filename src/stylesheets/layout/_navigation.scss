@@ -1,0 +1,28 @@
+%tm-nav {
+    @extend 
+        .d-flex,
+        .align-items-center;
+    height:65px;
+    > * {
+        @extend 
+            .mx-3;
+    }
+}
+
+.tm-nav{
+    @extend %tm-nav;
+    &__logo{        
+        @extend 
+            .d-flex,
+            .align-items-center,
+            .h-100,
+            .d-inline-block;
+        img {
+            height:75%;
+        }
+    }
+    &__links {
+        @extend 
+            .ml-auto;
+    }
+}
