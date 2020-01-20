@@ -1,0 +1,31 @@
+a.tm-btn, .tm-btn {
+    text-decoration:none;
+    padding: 1.2em 3.2em;
+    line-height:1.4em;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+    font-weight: 700;
+    border:none;
+    @extend 
+        .d-inline-flex,
+        .justify-content-center,
+        .align-items-center;
+    &--white {
+        background-color: $white;
+    }
+    &--primary {
+        background-color: $primary;
+    }
+    &--round {
+        border-radius: 3em;
+    }
+}
+
+button {
+    cursor: pointer;
+    @include hover-focus-active {
+        outline:none !important;
+    }
+}

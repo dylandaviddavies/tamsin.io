@@ -5,3 +5,24 @@ ul{
     list-style-type:none;
     padding:0;
 }
+
+a {
+    text-decoration:none;
+    @include hover-focus-active{
+        text-decoration:none;
+        color: inherit;
+    }
+}
+
+body{
+    margin:0;
+}
+
+@include headers(){
+    margin:0;
+    font-weight:normal;
+}
+
+p {
+    margin: 0;
+}

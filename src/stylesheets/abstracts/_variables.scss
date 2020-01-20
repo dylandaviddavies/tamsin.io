@@ -1,1 +1,67 @@
-$primary: #646ac2;
+// Colours
+$primary: #000;
+$white: #fff;
+$ok:#2b2b2b;
+$good:#2b2b2b;
+$hot:#2b2b2b;
+$light-text-colour: #7f7f7f;
+//$good: rgb(48, 184, 252);
+//$hot: rgb(255, 91, 91);
+$bg-colour: #fafafa;
+
+$colours: (
+    primary: $primary,
+    ok: $ok,
+    good: $good,
+    hot: $hot,
+    white: $white
+);
+
+$box-shadow-colours: ();
+@each $k, $v in $colours {
+    $box-shadow-colours: map-merge(
+        $box-shadow-colours,
+        ($k: $v)
+    );
+}
+
+// Typography
+$font-family: 'Raleway', sans-serif;
+$button-font-family: 'Raleway', sans-serif;
+$title-font-family: 'Raleway', sans-serif;
+
+$fonts: (
+    title: $title-font-family,
+    button: $button-font-family,
+    main: $font-family
+);
+
+$text-shadows: (
+    none: none,
+    stylish: .05em .05em rgba(0,0,0,.2),
+    sharpen: .01em .01em rgba(0,0,0,.3)
+);
+
+// Navigation
+$navbar-height: 55px;
+$navbar-md-height: 65px;
+
+// Box Shadows
+$box-shadows: (
+    none: none,
+    sm: 0 .125rem .25rem,
+    md: 0 .5rem 1rem,
+    lg: 0 1rem 3rem
+);
+
+// Directions
+$directions: (
+    l: 'left',
+    t: 'top',
+    r: 'right',
+    b: 'bottom'
+);
+$direction-values: (
+    n1: -1px,
+    0: 0
+);

@@ -2,16 +2,23 @@
     'abstracts/variables',
     'abstracts/functions',
     'abstracts/mixins',
-
-    '~bootstrap/scss/bootstrap',
+    
+    '~bootstrap/scss/bootstrap-grid',
+    '~bootstrap/scss/mixins',
+    '~bootstrap/scss/utilities',
 
     'base/reset',
     'base/typography',
+    'base/utilities',
 
     'layout/navigation',
     'layout/header',
     'layout/footer',
     'layout/forms',
+    'layout/body',
 
     'components/buttons',
-    'components/anchors';
+    'components/anchors',
+    'components/cards',
+    'components/sections',
+    'components/heroes';

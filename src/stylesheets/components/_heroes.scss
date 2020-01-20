@@ -1,0 +1,50 @@
+.tm-hero {
+    $self: &;
+    @extend 
+        .d-flex,
+        .justify-content-center,
+        .align-items-center,
+        .position-relative;
+    background-position:center;
+    background-size: cover;
+    height: 150vw;
+    padding-bottom: 10vw;
+    @include media-breakpoint-up(md) {
+        height: 70vw;
+        padding-bottom: 10vw;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 50vw;
+        padding-bottom: 10vw;
+    }
+    &__logo {
+        height:10vw;
+        @include media-breakpoint-up(lg){
+            height:6vw;
+        }
+    }
+    &__title {
+        @extend 
+            .text-shadow-stylish;
+        @include media-breakpoint-up(lg){
+            font-size:4em;
+        }
+    }
+    &__subtext {      
+        font-size:18px;
+        @include media-breakpoint-up(md){
+            font-size: 24px;
+        }
+        @include media-breakpoint-up(lg){
+            font-size: 33px;
+        }
+    }
+    &__content {        
+        @extend 
+            .d-flex,
+            .align-items-center,
+            .flex-column,
+            .position-relative;
+        z-index:1;
+    }
+}

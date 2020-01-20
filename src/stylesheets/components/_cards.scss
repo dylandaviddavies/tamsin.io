@@ -1,0 +1,117 @@
+.tm-plan-card {
+    position:relative;
+    @extend 
+        .d-flex,
+        .flex-column,
+        .align-items-center;
+    &__content{
+        padding: 40px 0 60px 0;
+        flex-grow:1;
+        @extend 
+            .bg-white,
+            .d-flex,
+            .flex-column,
+            .align-items-center;
+        border-radius:4px;
+        overflow:hidden;
+        box-shadow: 0px 8px 20px rgba(0,0,0,.1);
+        color:#2b2b2b;
+    }
+    &__title {
+        @extend 
+            .font-weight-bold;
+        font-size:12px;
+        letter-spacing:.5px;
+        text-transform:uppercase;
+    }
+    &__price, &__title, &__p {
+        @extend 
+            .text-center;
+    }
+    &__price, &__list__item, &__title, &__p {
+        padding: 0 24px;
+    }
+    &__price {
+        margin:6px 0 24px 0;
+        &__amount {
+            font-size: 40px;
+            font-weight:bold;
+            padding: 8px 0;
+        }
+        &__rate {
+            font-weight:500;
+            font-size:12px;
+        }
+    }
+    &__list {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        &__item {
+            @extend 
+                .d-flex,
+                .align-items-center,
+                .px-3;
+            padding-top: 8px;
+            padding-bottom:8px;
+            &__icon {
+                @extend 
+                    .d-flex,
+                    .justify-content-center,
+                    .align-items-center,
+                    .mx-3;                
+            }
+            &__title {                
+                color: $light-text-colour;
+                font-size:15px;
+            }
+        }
+    }
+    &__p {        
+        color: $light-text-colour;
+    }
+    &__btn {
+        position: absolute;
+        bottom:0;
+        transform: translateY(50%);
+        @extend 
+            .tm-btn,
+            .tm-btn--primary,
+            .tm-btn--round;
+    }
+}
+
+.tm-feature {
+    @extend 
+        .d-flex,
+        .text-center,
+        .flex-column;
+    &__icon {
+        @extend 
+            .d-inline-flex,
+            .text-primary,
+            .mx-auto,
+            .justify-content-center,
+            .align-items-center;
+        height:2.5em;
+        width:2.5em;
+        font-size: 24px;
+        @include media-breakpoint-up(lg) {            
+            font-size: 28px;
+        }
+        background-color: #f1f1f1;
+        border-radius:100%;
+    }
+    &__title {
+        @extend 
+            .font-weight-bold,
+            .mb-3,
+            .mt-4;
+        @include media-breakpoint-up(lg) {            
+            font-size: 1.4em;
+        }
+    }
+    &__subtext {
+        color: $light-text-colour;
+        font-weight:500;
+    }
+}

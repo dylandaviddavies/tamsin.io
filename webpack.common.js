@@ -2,7 +2,6 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const path = require("path");
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -16,7 +15,6 @@ module.exports = {
             filename: "[name]/stylesheets/index.css",
             chunkFilename: "[id].css"
         }),
-        new OptimizeCSSAssetsPlugin({}),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'tamsin.io',
@@ -90,13 +88,18 @@ module.exports = {
                 ]
             },
             {
-              test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-              loader: 'url-loader',
-              options: {
-                esModule: false,
-                limit: 10000
-              }
-            }
+              test: /\.(png|jpe?g|gif|svg|ttf|woff|woff2)(\?.*)?$/,
+              use: [
+                {
+                    loader: 'url-loader',
+                    options: {
+                        esModule: false,
+                        limit: 10000,
+                        name:'/assets/img/[hash].[ext]' 
+                    }
+                }
+              ]
+            },
         ]
     }
 }

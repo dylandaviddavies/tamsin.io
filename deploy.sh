@@ -2,9 +2,9 @@
 
 set -e
 
-npm run build
+npm run prod:build
 
-cd public/
+cd dist/
 
 git init
 git add -A

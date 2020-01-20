@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Round|Raleway:300,400,500,600,700&display=swap');
+
+button {
+    font-family: $button-font-family;
+}
+input{
+    &[type=button], &[type=submit] {
+        font-family: $button-font-family;
+    }
+}
+
+@include headers {
+    font-family: $title-font-family;
+}
+
+body,a, form, table, td, input, select {
+    font-family: $font-family;
+}

@@ -1,0 +1,36 @@
+@each $k, $v in $box-shadows {
+    .shadow-#{$k} {
+        @each $k2, $v2 in $box-shadow-colours {
+            @include box-shadow($k, $colours);
+        }
+    }
+}
+
+@each $k, $v in $fonts {
+    .font-#{$k} {
+        font-family: $v;
+    }
+}
+
+@each $k, $v in $colours {
+    .bg-#{$k} {
+        background-color: $v !important;
+    }
+    .text-#{$k} {
+        color: $v !important;
+    }
+}
+
+@each $k, $v in $directions {
+    @each $k2, $v2 in $direction-values {
+        .#{$k}-#{$k2} {
+            #{$v}: $v2;
+        }
+    }
+}
+
+@each $k, $v in $text-shadows {
+    .text-shadow-#{$k} {
+        text-shadow: $v;
+    }
+}
