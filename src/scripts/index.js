@@ -1,4 +1,4 @@
-import JQuery from 'jquery'
+import $ from 'jquery'
 import Vue from 'vue/dist/vue.js'
 import store from './store';
 import i18n from './i18n';

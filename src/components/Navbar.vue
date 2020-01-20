@@ -1,43 +1,25 @@
 <template lang="pug">
-    nav.tm-nav(:class="{'tm-nav--hero': isHero}")
+    nav.tm-nav(:class="{'tm-nav--hero': hero}")
         div.tm-nav__content.container
             router-link.tm-nav__logo(to='/') 
-                img(src='@/assets/logo.png' v-if="!isHero")
-                img(src='@/assets/logo-white.png' v-if="isHero")
+                img(src='@/assets/logo-white.svg')
             ul.tm-nav__links
-                li(v-for='item in items' :key='item.link')
-                    router-link(:to='item.link' class='tm-nav__link') {{item.label}}
-            button.tm-nav__menu(type="button" aria-controls="tm-sidebar" aria-expanded="false")
+                li(v-for='link in links' :key='link.link')
+                    router-link(:to='link.link' class='tm-nav__link') {{link.label}}
+            button.tm-nav__menu(type="button" aria-controls="tm-shelf" @click="onShelfOpen" aria-expanded="false")
                 i.material-icons-round(aria-hidden="true") menu
 </template>
 
 <script>
-import TmNavbar from "./Navbar.vue"
 export default {
-    components:{TmNavbar},
+    props: {
+        links: Array,
+        hero: Boolean,
+        onShelfOpen: Function
+    },
     data() {
         return {
-            isHero: this.$route.path === '/',
-            items: [
-                {
-                    link: '/',
-                    label: 'Home'
-                },
-                {
-                    link: '/products',
-                    label: 'Products'
-                },
-                {
-                    link: '/careers',
-                    label: 'Careers',
-                }
-            ],
         };
-    },
-    watch: {
-        '$route' () {
-            this.isHero = this.$route.path === '/';
-        }
     }
 };
 </script>

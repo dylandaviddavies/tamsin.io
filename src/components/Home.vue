@@ -28,8 +28,9 @@
         div.col-12
           h6.tm-section__subtitle.mb-2 Let's Get Started
           h2.tm-section__title.mb-4 Plans
+
       div.row
-        div.col-md-4.tm-plan-card.mb-5
+        div.col-lg-4.tm-plan-card.mb-5
           div.tm-plan-card__content
             h3.tm-plan-card__title Free
             div.tm-plan-card__price
@@ -48,7 +49,7 @@
                 span.tm-plan-card__list__item__title Unlimited listening time.
           button.bg-primary.text-white.tm-plan-card__btn Get started
             
-        div.col-md-4.tm-plan-card.mb-5
+        div.col-lg-4.tm-plan-card.mb-5
           div.tm-plan-card__content
             h3.tm-plan-card__title Pro
             div.tm-plan-card__price 
@@ -64,7 +65,7 @@
                 span.tm-plan-card__list__item__title Listening insights.
           button.bg-primary.text-white.tm-plan-card__btn Get started
 
-        div.col-md-4.tm-plan-card.mb-5
+        div.col-lg-4.tm-plan-card.mb-5
           div.tm-plan-card__content
             h3.tm-plan-card__title Aficionado
             div.tm-plan-card__price 
@@ -83,7 +84,6 @@
                 span.tm-plan-card__list__item__title Access to advanced APIs for developers.
           button.bg-primary.text-white.tm-plan-card__btn Get started
             
-
 </template>
 
 <script>
