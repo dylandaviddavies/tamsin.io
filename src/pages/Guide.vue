@@ -5,7 +5,7 @@
           h1.tm-hero__title.text-white.text-shadow-sharpen.mb-4.pb-3 Hi, need help with anything?
           div.tm-guide-hero__search
             i.material-icons-round.tm-guide-hero__search__icon(aria-hidden="true") search
-            input.tm-guide-hero__search
+            input.tm-guide-hero__search(placeholder="Search...")
         img(src="@/assets/hero-wave.svg" class='position-absolute zi-0 b-n1')
       div.tm-guide-container
         div.container.pb-5.mb-5
