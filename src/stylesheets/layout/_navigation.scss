@@ -49,6 +49,7 @@
             .ml-auto,
             .px-4,
             .text-shadow-stylish,
+            .text-white,
             .text-uppercase;
         font-size:11px;
         font-weight:bold;
@@ -62,11 +63,7 @@
         background:none;
         border:none;
         left:16px;
+        color:$white;
     }
-    &--hero {
-        position:absolute;
-        #{$self}__title, #{$self}__link, #{$self}__menu{
-            @extend .text-white;
-        }
-    }
+    position:absolute;
 }

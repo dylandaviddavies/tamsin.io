@@ -5,11 +5,12 @@
         main
             transition(name="fade" mode="out-in")
                 router-view
+        button#tm-back-to-top-btn.tm-floating-btn
 </template>
 
 <script>
-import TmNavbar from "./Navbar.vue"
-import TmShelf from "./Shelf.vue"
+import TmNavbar from "{c}/Navbar.vue"
+import TmShelf from "{c}/Shelf.vue"
 export default {
   components:{TmNavbar, TmShelf},
   data: function() {
@@ -22,8 +23,8 @@ export default {
                     label: 'Home'
                 },
                 {
-                    link: '/products',
-                    label: 'Products'
+                    link: '/guide',
+                    label: 'Guide'
                 },
                 {
                     link: '/careers',
@@ -36,8 +37,8 @@ export default {
                     label: 'Home'
                 },
                 {
-                    link: '/products',
-                    label: 'Products'
+                    link: '/guide',
+                    label: 'Guide'
                 },
                 {
                     link: '/careers',

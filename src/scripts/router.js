@@ -1,7 +1,7 @@
 import Vue from 'vue/dist/vue.js';
 import VueRouter from 'vue-router';
-import Home from '@/components/Home.vue';
-import Products from '@/components/Products.vue';
+import Home from '{p}/Home.vue';
+import Guide from '{p}/Guide.vue';
 Vue.use(VueRouter);
 export default new VueRouter({
     routes: [
@@ -10,8 +10,8 @@ export default new VueRouter({
             component: Home
         },
         {
-            path: "/products",
-            component: Products
+            path: "/guide",
+            component: Guide
         },
     ]
 });

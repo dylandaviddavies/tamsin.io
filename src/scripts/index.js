@@ -13,3 +13,7 @@ new Vue({
     store,
     components
 }).$mount("#app");
+
+$(document).on("click", "#tm-back-to-top-btn", () => {
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+});
