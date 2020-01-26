@@ -17,7 +17,7 @@
                 p.tm-guide-card__description {{card.description}}
         div.tm-zebra--odd
           img.tm-zebra__img(src="@/assets/white-wave.svg")
-          div.tm-zebra__foal.tm-section.tm-section--padded--t-more
+          div.tm-zebra__foal.tm-section
             div.container 
               div.row.align-items.flex-column-reverse.flex-md-row 
                 div.col-lg-7.col-md-7.py-4.col-12.d-flex.align-items-center
