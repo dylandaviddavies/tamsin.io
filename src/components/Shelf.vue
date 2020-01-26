@@ -7,8 +7,8 @@
                 button.tm-shelf__close.material-icons-round(@click="close" aria-controls="tm-shelf" :aria-expanded="isVisible") close
             div.tm-shelf__drawer__body
                 ul.tm-shelf__drawer__links
-                    li(v-for='link in links' :key='link.link')
-                        router-link(:to='link.link' class='tm-shelf__drawer__link') {{link.label}}
+                    li(v-for='link in links' :key='link.label')
+                        router-link.tm-shelf__drawer__link(:to='link.link' v-on:click.native="close") {{link.label}}
 </template>
 
 <script>

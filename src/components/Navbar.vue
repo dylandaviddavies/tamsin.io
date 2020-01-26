@@ -4,7 +4,7 @@
             router-link.tm-nav__logo(to='/') 
                 img(src='@/assets/logo-white.svg')
             ul.tm-nav__links
-                li(v-for='link in links' :key='link.link')
+                li(v-for='link in links' :key='link.label')
                     router-link(:to='link.link' class='tm-nav__link') {{link.label}}
             button.tm-nav__menu(type="button" aria-controls="tm-shelf" @click="onShelfOpen" aria-expanded="false")
                 i.material-icons-round(aria-hidden="true") menu

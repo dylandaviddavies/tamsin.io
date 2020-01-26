@@ -18,37 +18,25 @@ import TmShelf from "{c}/Shelf.vue"
 export default {
   components:{TmNavbar, TmShelf, TmFooter},
   data: function() {
+        let links = [
+                {
+                    link: '/',
+                    label: 'Home'
+                },
+                {
+                    link: '/guide',
+                    label: 'Guide'
+                },
+                {
+                    link: '/',
+                    label: 'Careers',
+                }
+            ];
         return {
             isHero: this.$route.path === '/',
             isShelfVisible: false,
-            navLinks: [
-                {
-                    link: '/',
-                    label: 'Home'
-                },
-                {
-                    link: '/guide',
-                    label: 'Guide'
-                },
-                {
-                    link: '/careers',
-                    label: 'Careers',
-                }
-            ],
-            shelfLinks: [
-                {
-                    link: '/',
-                    label: 'Home'
-                },
-                {
-                    link: '/guide',
-                    label: 'Guide'
-                },
-                {
-                    link: '/careers',
-                    label: 'Careers',
-                }
-            ],
+            navLinks: links,
+            shelfLinks: links,
         };
     },
     methods: {
@@ -57,12 +45,6 @@ export default {
         },
         onShelfClose() {
             this.isShelfVisible = false;
-        }
-    },
-    watch: {
-        '$route' () {
-            this.isShelfVisible = false;
-            this.isHero = this.$route.path === '/';
         }
     }
 };

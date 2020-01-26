@@ -74,25 +74,25 @@ export default {
         ],
         cards: [
           {
-            href: '/guide/howto',
+            href: '/guide/',
             img: require('@/assets/guide-howto.svg'),
             title: 'How To\'s',
             description: 'Tutorials on how to to just about anything.'
           },
           {
-            href: '/guide/knowledge',
+            href: '/guide/',
             img: require('@/assets/guide-knowledgebase.svg'),
             title: 'FAQs',
             description: 'Consult our FAQ guide.'
           },
           {
-            href: '/guide/developers',
+            href: '/guide/',
             img: require('@/assets/guide-developers.svg'),
             title: 'Developers',
             description: 'API reference, developer tools, and troubleshooting.'
           },
           {
-            href: '/guide/support',
+            href: '/guide/',
             img: require('@/assets/guide-support.svg'),
             title: 'Support',
             description: 'Having an issue? Let\'s get in touch.'
