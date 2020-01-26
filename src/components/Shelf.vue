@@ -3,7 +3,7 @@
         div.tm-shelf__drawer
             div.tm-shelf__drawer__header
                 router-link.tm-shelf__drawer__logo(to='/')
-                    img.tm-shelf__drawer__img(src='@/assets/logo-white.svg')
+                    img.tm-shelf__drawer__img(src='@/assets/logo-white.svg' alt="tamsin.io")
                 button.tm-shelf__close.material-icons-round(@click="close" aria-controls="tm-shelf" :aria-expanded="isVisible") close
             div.tm-shelf__drawer__body
                 ul.tm-shelf__drawer__links

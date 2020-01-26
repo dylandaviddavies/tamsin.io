@@ -2,7 +2,7 @@
     nav.tm-nav(:class="{'tm-nav--hero': hero}")
         div.tm-nav__content.container
             router-link.tm-nav__logo(to='/') 
-                img(src='@/assets/logo-white.svg')
+                img(src='@/assets/logo-white.svg' alt="tamsin.io")
             ul.tm-nav__links
                 li(v-for='link in links' :key='link.label')
                     router-link(:to='link.link' class='tm-nav__link') {{link.label}}

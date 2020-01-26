@@ -5,18 +5,18 @@
           h1.tm-hero__title.text-white.mb-3.pb-3 Hi, what can we help you with?
           div.tm-guide-hero__search
             i.material-icons-round.tm-guide-hero__search__icon(aria-hidden="true") search
-            input.tm-guide-hero__search(placeholder="Search...")
-        img(src="@/assets/hero-wave.svg" class='position-absolute zi-0 b-n1')
+            input.tm-guide-hero__search(aria-label="Search" placeholder="Search...")
+        img(src="@/assets/hero-wave.svg" class='position-absolute zi-0 b-n1' alt="" aria-hidden="true")
       div.tm-guide-container
         div.container.pb-5.mb-5
           div.row.tm-guide-nav-container
             div.col-lg-3.col-6.mb-4.px-2.px-md-3.px-lg-2.px-xl-3(v-for="card in cards" :key="card.title")
               a.tm-guide-card.h-100(:href='card.href')
-                img.tm-guide-card__img(:src="card.img")
+                img.tm-guide-card__img(:src="card.img" :alt="card.title")
                 h2.tm-guide-card__title {{card.title}}
                 p.tm-guide-card__description {{card.description}}
         div.tm-zebra--odd
-          img.tm-zebra__img(src="@/assets/white-wave.svg")
+          img.tm-zebra__img(src="@/assets/white-wave.svg" alt="" aria-hidden="true")
           div.tm-zebra__foal.tm-section
             div.container 
               div.row.align-items.flex-column-reverse.flex-md-row 
@@ -26,8 +26,8 @@
                     h4.tm-giant-title.font-weight-bold.mb-5 Introducing our new API
                     router-link.tm-btn.tm-btn--primary.tm-btn--round.tm-btn--animated--rise(to="/guide") Read more   
                 div.col-lg-5.col-md-5.py-4.col-12.d-flex.align-items-center.justify-content-center           
-                  img(id="apiPic" src='@/assets/tamsin-io-black-api.svg')  
-          img.tm-zebra__img.rotate-180(src="@/assets/white-wave.svg")
+                  img(id="apiPic" src='@/assets/tamsin-io-black-api.svg' alt="tamsin.io api")  
+          img.tm-zebra__img.rotate-180(src="@/assets/white-wave.svg" alt="" aria-hidden="true")
           div.tm-zebra__foal.tm-section.tm-section--padded--t-more
             div.container 
               div.row

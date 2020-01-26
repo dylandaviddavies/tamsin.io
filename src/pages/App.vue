@@ -3,7 +3,7 @@
         tm-navbar(:hero="isHero" :links="navLinks" :onShelfOpen="onShelfOpen")
         tm-shelf(:links="shelfLinks" :visible="isShelfVisible" :onClose="onShelfClose")
         div.d-flex.flex-column
-            button#tm-back-to-top-btn.tm-floating-btn
+            button#tm-back-to-top-btn.tm-floating-btn(aria-label="Back to Top")
             main
                 transition(name="fade" mode="out-in")
                     router-view

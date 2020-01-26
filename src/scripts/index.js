@@ -4,7 +4,10 @@ import store from './store';
 import i18n from './i18n';
 import router from './router';
 import components from './components';
+
+// Styles
 require('@/stylesheets/index.scss');
+
 Vue.config.productionTip = false;
 new Vue({
     template:"<app/>",
