@@ -10,7 +10,7 @@
       div.tm-guide-container
         div.container.pb-5.mb-5
           div.row.tm-guide-nav-container
-            div.col-lg-3.col-6.mb-4.px-2.px-md-3.px-lg-2.px-xl-3(v-for="card in cards" :key="card.href")
+            div.col-lg-3.col-6.mb-4.px-2.px-md-3.px-lg-2.px-xl-3(v-for="card in cards" :key="card.title")
               a.tm-guide-card.h-100(:href='card.href')
                 img.tm-guide-card__img(:src="card.img")
                 h2.tm-guide-card__title {{card.title}}
