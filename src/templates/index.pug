@@ -1,6 +1,21 @@
 doctype html
 html(lang="en-CA")
-    head         
+    head 
+        - var thumbnail = 'https://dylandaviddavies.github.io' + require('@/assets/thumbnail.png')
+        meta(property="og:url" content="https://dylandaviddavies.github.io/tamsin.io")
+        meta(property="og:title" content="tamsin.io")
+        meta(property="og:description" content="Vue+Pug+Sass mockup by Dylan Davies")
+        meta(property="og:site_name" content="tamsin.io")
+        meta(property="og:image" content=thumbnail)
+        meta(property="fb:app_id" content="1345605492308388")
+        meta(property="og:type" content="website" )
+        meta(property="og:locale" content="en_CA")
+
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:title" content="tamsin.io")
+        meta(name="twitter:description" content="Vue+Pug+Sass mockup by Dylan Davies")
+        meta(name="twitter:image" content=thumbnail)
+        
         script(src="https://kit.fontawesome.com/2c7ccbb05b.js" crossorigin="anonymous")
     body
         #app
