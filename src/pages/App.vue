@@ -2,17 +2,21 @@
     div
         tm-navbar(:hero="isHero" :links="navLinks" :onShelfOpen="onShelfOpen")
         tm-shelf(:links="shelfLinks" :visible="isShelfVisible" :onClose="onShelfClose")
-        main
-            transition(name="fade" mode="out-in")
-                router-view
-        button#tm-back-to-top-btn.tm-floating-btn
+        div.d-flex.flex-column
+            button#tm-back-to-top-btn.tm-floating-btn
+            main
+                transition(name="fade" mode="out-in")
+                    router-view
+            tm-footer
+            
 </template>
 
 <script>
+import TmFooter from '{c}/Footer.vue';
 import TmNavbar from "{c}/Navbar.vue"
 import TmShelf from "{c}/Shelf.vue"
 export default {
-  components:{TmNavbar, TmShelf},
+  components:{TmNavbar, TmShelf, TmFooter},
   data: function() {
         return {
             isHero: this.$route.path === '/',

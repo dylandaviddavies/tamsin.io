@@ -2,7 +2,7 @@
     div
       div.tm-hero--bg.tm-hero(:style="{backgroundImage:`url('${ require('@/assets/guide-hero.png') }')`}")
         div.tm-hero__content.container
-          h1.tm-hero__title.text-white.text-shadow-sharpen.mb-4.pb-3 Hi, need help with anything?
+          h1.tm-hero__title.text-white.mb-3.pb-3 Hi, what can we help you with?
           div.tm-guide-hero__search
             i.material-icons-round.tm-guide-hero__search__icon(aria-hidden="true") search
             input.tm-guide-hero__search(placeholder="Search...")
@@ -15,8 +15,20 @@
                 img.tm-guide-card__img(:src="card.img")
                 h2.tm-guide-card__title {{card.title}}
                 p.tm-guide-card__description {{card.description}}
-        div.zebra
-          div.tm-section.tm-section--border-top
+        div.tm-zebra--odd
+          img.tm-zebra__img(src="@/assets/white-wave.svg")
+          div.tm-zebra__foal.tm-section.tm-section--padded--t-more
+            div.container 
+              div.row.align-items.flex-column-reverse.flex-md-row 
+                div.col-lg-7.col-md-7.py-4.col-12.d-flex.align-items-center
+                  div
+                    h6.tm-giant-subtitle Developers
+                    h4.tm-giant-title.font-weight-bold.mb-5 Introducing our new API
+                    router-link.tm-btn.tm-btn--primary.tm-btn--round.tm-btn--animated--rise(to="/guide") Read more   
+                div.col-lg-5.col-md-5.py-4.col-12.d-flex.align-items-center.justify-content-center           
+                  img(id="apiPic" src='@/assets/tamsin-io-black-api.svg')  
+          img.tm-zebra__img.rotate-180(src="@/assets/white-wave.svg")
+          div.tm-zebra__foal.tm-section.tm-section--padded--t-more
             div.container 
               div.row
                 div.col-12
@@ -95,15 +107,10 @@ export default {
   @import '@/stylesheets/abstracts/_mixins.scss';
   @import '@/stylesheets/vendors/_all.scss';
   $hero-pb: 28vw;
-  .zebra {
-    > *:nth-child(odd){
-      background-color: $white;
-    }
-  }
   .tm-hero {    
     padding-top: calc(#{$navbar-height} + 10vw);
     padding-bottom: calc(#{$hero-pb});
-    @include overlay(#12224e);
+    @include overlay($guide-primary);
   }
   .tm-guide-container {
     transform: translateY(-#{$hero-pb * .7});
@@ -116,27 +123,30 @@ export default {
         &__icon {
             z-index: 1;
             position:absolute;
-            left:16px;
+            left:18px;
+            font-size:22px;
             top:0;
             height:100%;
             display:flex;
             justify-content:center;
             align-items:center;
-            color: #acacac;
+            color: #b1b1b1;
         }
         input {
+            box-shadow: 0 2px 2px rgba(0,0,0,.5);
             max-width: 100%;
             width: 100%;
             @include media-breakpoint-up (sm){
-              width: 400px;
+              width: 350px;
             }
-            padding:16px 32px 14px 50px;
+            padding:18px 32px 16px 48px;
             font-size:14px;
+            font-size:16px;
             border-radius:3em;
             display: block;            
             overflow:hidden;
             border:none;
-            font-weight:500;
+            font-weight: 500;
             @include hover-focus-active {
                 outline:none;
             }

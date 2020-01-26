@@ -41,3 +41,32 @@
         z-index: $v !important;
     }
 }
+
+.rotate-180{
+    transform: rotate(180deg);
+}
+
+.tm-zebra {
+    &__img {
+      display: block;
+      margin: -1px 0;
+    }
+    > .tm-zebra__foal {
+        &:nth-of-type(even){
+          background-color:$white;
+        }
+        &:nth-of-type(odd){
+          background-color:$bg-colour;
+        }
+    }
+    &--odd {
+        > .tm-zebra__foal {
+            &:nth-of-type(even){
+              background-color:$bg-colour;
+            }
+            &:nth-of-type(odd){
+              background-color:$white;
+            }
+        }
+    }
+  }

@@ -4,7 +4,7 @@
             div.tm-shelf__drawer__header
                 router-link.tm-shelf__drawer__logo(to='/')
                     img.tm-shelf__drawer__img(src='@/assets/logo-white.svg')
-                button.tm-shelf__close.material-icons-round(@click="close" aria-hidden='true' aria-controls="tm-shelf" aria-expanded="false") close
+                button.tm-shelf__close.material-icons-round(@click="close" aria-controls="tm-shelf" :aria-expanded="isVisible") close
             div.tm-shelf__drawer__body
                 ul.tm-shelf__drawer__links
                     li(v-for='link in links' :key='link.link')
