@@ -17,14 +17,7 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'tamsin.io',
-            template: 'src/templates/index.pug',
-            favicon: "src/assets/favicon.png",
-            meta: {
-                'viewport': 'width=device-width,initial-scale=1,shrink-to-fit=no',
-                'theme-color': '#1d1d1d',
-                'description': 'Vue+Pug+Sass mockup by Dylan Davies'
-            }
+            favicon: "src/assets/favicon.png"
         })
     ],
     devtool: "source-map",

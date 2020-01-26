@@ -1,7 +1,12 @@
 doctype html
 html(lang="en-CA")
     head 
-        - var thumbnail = 'https://dylandaviddavies.github.io/tamsin.io' + require('@/assets/thumbnail.png')
+        meta(charset='utf-8')
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no")
+        title= htmlWebpackPlugin.options.title
+
+        - var thumbnail = 'https://dylandaviddavies.github.io' + require('@/assets/thumbnail.png')
         meta(property="og:url" content="https://dylandaviddavies.github.io/tamsin.io")
         meta(property="og:title" content="tamsin.io")
         meta(property="og:description" content="Vue+Pug+Sass mockup by Dylan Davies")
@@ -17,5 +22,14 @@ html(lang="en-CA")
         meta(name="twitter:image" content=thumbnail)
         
         script(src="https://kit.fontawesome.com/2c7ccbb05b.js" crossorigin="anonymous")
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-145816593-3")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-145816593-3');
+
     body
         #app
