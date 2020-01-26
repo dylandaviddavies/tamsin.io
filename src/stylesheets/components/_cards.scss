@@ -21,7 +21,7 @@
         @extend 
             .font-weight-bold;
         font-size:12px;
-        letter-spacing:.5px;
+        letter-spacing:1px;
         text-transform:uppercase;
     }
     &__price, &__title, &__p {
@@ -34,7 +34,7 @@
     &__price {
         margin:6px 0 24px 0;
         &__price {
-            font-size: 50px;
+            font-size: 44px;
             font-weight:bold;
             padding: 8px 0 14px 0;
         }
