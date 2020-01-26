@@ -17,7 +17,9 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            favicon: "src/assets/favicon.png"
+            title: 'tamsin.io',
+            favicon: "src/assets/favicon.png",            
+            template: 'src/templates/index.pug'
         })
     ],
     devtool: "source-map",
