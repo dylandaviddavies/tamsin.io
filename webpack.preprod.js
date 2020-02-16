@@ -8,8 +8,11 @@ module.exports = merge(common, {
   plugins: [    
     new OptimizeCSSAssetsPlugin({}),
   ],
-  output: {
-      publicPath: '/tamsin.io/'
+  devServer: {
+    contentBase: './dist',
+    compress: true,
+    port: 9000,
+    writeToDisk: true
   },
   performance: {
     hints: false

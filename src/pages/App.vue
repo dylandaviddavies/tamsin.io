@@ -5,10 +5,9 @@
         div.d-flex.flex-column
             button#tm-back-to-top-btn.tm-floating-btn(aria-label="Back to Top")
             main
-                transition(name="fade" mode="out-in")
+                transition
                     router-view
             tm-footer
-            
 </template>
 
 <script>

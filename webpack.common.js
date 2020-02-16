@@ -31,7 +31,8 @@ module.exports = {
         alias: {
             '@': path.resolve('src'),
             '{p}': path.resolve('src/pages'),
-            '{c}': path.resolve('src/components')
+            '{c}': path.resolve('src/components'),
+            '{vue}': 'vue'
         }
     },
     module: {

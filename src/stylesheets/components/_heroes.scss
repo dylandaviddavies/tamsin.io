@@ -30,4 +30,9 @@
             .position-relative;
         z-index:1;
     }
+    &__wave {
+        @extend .position-absolute, .zi-0, .b-n1;
+        margin-bottom: -1px;
+        width: 101%;
+    }
 }

@@ -6,7 +6,7 @@
           div.tm-guide-hero__search
             i.material-icons-round.tm-guide-hero__search__icon(aria-hidden="true") search
             input.tm-guide-hero__search(aria-label="Search" placeholder="Search...")
-        img(src="@/assets/hero-wave.svg" class='position-absolute zi-0 b-n1' alt="" aria-hidden="true")
+        img.tm-hero__wave(src="@/assets/hero-wave.svg" alt="" aria-hidden="true")
       div.tm-guide-container
         div.container.pb-5.mb-5
           div.row.tm-guide-nav-container
@@ -74,25 +74,25 @@ export default {
         ],
         cards: [
           {
-            href: '/guide/',
+            href: '#',
             img: require('@/assets/guide-howto.svg'),
             title: 'How To\'s',
             description: 'Tutorials on how to to just about anything.'
           },
           {
-            href: '/guide/',
+            href: '#',
             img: require('@/assets/guide-knowledgebase.svg'),
             title: 'FAQs',
             description: 'Consult our FAQ guide.'
           },
           {
-            href: '/guide/',
+            href: '#',
             img: require('@/assets/guide-developers.svg'),
             title: 'Developers',
             description: 'API reference, developer tools, and troubleshooting.'
           },
           {
-            href: '/guide/',
+            href: '#',
             img: require('@/assets/guide-support.svg'),
             title: 'Support',
             description: 'Having an issue? Let\'s get in touch.'

@@ -9,7 +9,8 @@
     "dev:build": "webpack --config webpack.dev.js",
     "watch": "webpack --config webpack.dev.js --watch",
     "deploy": "sh deploy.sh",
-    "dev": "webpack-dev-server --open --config webpack.dev.js"
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "preprod": "webpack-dev-server --open --config webpack.preprod.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "@babel/plugin-transform-classes": "^7.7.4",
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.7",
+    "aos": "^3.0.0-beta.6",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.4.1",
